@@ -9,6 +9,12 @@ for(int i=1; i<=10; i++) {
     String unhash = PseudoCrypt.unhash(hash);
 
     System.out.println(i + " - " + hash + " - " + unhash);
+
+```go
+ps := pseudocrypt.Create()
+for i := 0; i < 10; i++ {
+    hash := ps.Hash(int64(i), 5)
+    fmt.Println(i, " - ", hash, " - ", ps.Unhash(hash))
 }
 ```
 
