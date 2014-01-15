@@ -78,7 +78,8 @@ public class PseudoCrypt {
 	
 	private static String str_pad_left(String numStr, int length, String c) {
 		if(numStr.length() < length) {
-			for(int i=0; i< length - numStr.length(); i++){
+			int diff = length - numStr.length();
+			for(int i=0; i< diff; i++){
 				numStr = c + numStr;
 			}
 		}

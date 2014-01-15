@@ -3,13 +3,17 @@ PseudoCrypt
 
 A small library for creating reversible obfuscated identifiers for integer values.
 
+### Java snip
 ```java
-for(int i=1; i<=10; i++) {
-    String hash = PseudoCrypt.hash(i, 6);
+for(int i=0; i<10; i++) {
+    String hash = PseudoCrypt.hash(i, 5);
     String unhash = PseudoCrypt.unhash(hash);
 
     System.out.println(i + " - " + hash + " - " + unhash);
+}
+```
 
+### GO snip (by donezo)
 ```go
 ps := pseudocrypt.Create()
 for i := 0; i < 10; i++ {
@@ -18,6 +22,7 @@ for i := 0; i < 10; i++ {
 }
 ```
 
+### output
 ```
 0  -  00000  -  0
 1  -  CjIO3  -  1
